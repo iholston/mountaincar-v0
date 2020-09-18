@@ -9,7 +9,7 @@ The basic algorithm:
 4. Execute action and observe reward and new state.
 5. Update Q(s1,s2,a) based on the q-learning algorithm:  
    <i>Q(s1,s2,a) = (1-alpha)Q(s1,s2,a) + alpha(reward + gamma(maxQ(nextstate, all actions))</i>  
-   alpha = learning rate  
-   gamma = discount rate  
+   <i>alpha</i> = learning rate  
+   <i>gamma</i> = discount rate  
 6. Repeat 2-5 until convergence.
 
