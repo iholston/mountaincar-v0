@@ -80,7 +80,7 @@ class mountaincar_driver:
         for _ in range(episodes):
             state = self.descretize_state(self.env.reset())
             done = False
-            while done != True:
+            while not done:
                 self.env.render()
                 action = np.argmax(self.qtable[state[0], state[1]])
                 next_state, _, done, _ = self.env.step(action)
@@ -94,9 +94,9 @@ gamma = .9 # future reward discount
 epsilon = .1 # random action rate
 episodes = 5000
 
-isaac = mountaincar_driver(alpha, gamma, epsilon)
-isaac.train(episodes)
-isaac.display(3)
+dEarnhardt = mountaincar_driver(alpha, gamma, epsilon)
+dEarnhardt.train(episodes)
+dEarnhardt.display(3)
 
 
 
