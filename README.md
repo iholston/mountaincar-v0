@@ -13,4 +13,4 @@ The basic algorithm:
    <i>gamma</i> = discount rate  
 6. Repeat 2-5 until convergence.
 
-My particular implementation would be improved the simple addition of an epsilon-greedy exploration strategy where epsilon decays over time. However, as long as epsilon is small this works just fine.
+Exploration strategy is epsilon-greedy strategy where epsilon decays over time.
