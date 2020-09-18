@@ -5,12 +5,10 @@ Simple reinforcement learning solution to the [mountaincar-v0](https://gym.opena
 The basic algorithm:
 1. Initialize Q(s1,s2,a) to small random values.
 2. Observe current state.
-3. Choose an action based on exploration strategy.
+3. Choose an action based on exploration strategy. This implements an epsilon-greedy strat where epsilon decays over time.
 4. Execute action and observe reward and new state.
 5. Update Q(s1,s2,a) based on the q-learning algorithm:  
    <i>Q(s1,s2,a) = (1-alpha)Q(s1,s2,a) + alpha(reward + gamma(maxQ(nextstate, all actions))</i>  
    <i>alpha</i> = learning rate  
    <i>gamma</i> = discount rate  
 6. Repeat 2-5 until convergence.
-
-Exploration strategy is epsilon-greedy strategy where epsilon decays over time.
